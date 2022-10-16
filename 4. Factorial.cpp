@@ -1,14 +1,26 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
-{
-    int i, fact = 1, number;
-    cout << "Enter any Number: ";
-    cin >> number;
-    for (i = 1; i <= number; i++)
-    {
+
+int factorial(int n) {
+
+    int fact = 1;
+
+    for(int i = 1; i<=n; i++ ) {
         fact = fact * i;
     }
-    cout << "Factorial of " << number << " is: " << fact << endl;
+
+    return fact;
+}
+
+
+int main( ) {
+
+    int n;
+    
+    cout << "Enter number to find factorial: " << endl;
+    cin>> n;
+
+    cout <<" Factorial is:  " << factorial(n) << endl;
+
     return 0;
 }
